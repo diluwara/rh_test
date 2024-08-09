@@ -1,4 +1,3 @@
-```markdown
 # My Fullstack Project
 
 This project consists of a Flask backend and a React frontend, both of which are containerized using Docker. Follow the instructions below to set up and run the application.
@@ -58,8 +57,7 @@ This project consists of a Flask backend and a React frontend, both of which are
 - **View Logs**: Use `docker-compose logs` to view logs for any service if you encounter issues.
 - **Rebuild Containers**: If you make changes to the code and need to rebuild, use `docker-compose up --build`.
 
-- **Environment Variables**: Ensure any required environment variables are set in the `.env` files or `docker-compose.yml`.
-- **Network Configuration**: Ensure that network settings allow for connections to `localhost` on the specified ports.
+## Additional Notes
 
-This README provides a quick guide to get the application up and running. If you encounter any issues or have questions, please consult the documentation or reach out for support.
-```
+- **Environment Variables**: Ensure any required environment variables are set in the `.env` files or `docker-compose.yml`.
+- **Network Configuration**: Ensure that network settings allow for connections to `localhost` on the specified ports
