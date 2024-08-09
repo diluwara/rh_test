@@ -13,8 +13,19 @@ app.config.from_object(load_config())
 
 # Initialize the extensions
 db = SQLAlchemy(app)
-db.init_app(app)
 migrate = Migrate(app, db)
+
+def create_app(testing=False):
+    # Create the Flask application
+    app = Flask(__name__)
+    CORS(app)
+
+    # Load configuration
+    if testing:
+        app.config.from_object('config.TestConfig')  # Assuming TestConfig is defined in your config module
+    else:
+        app.config.from_object(load_config())
+        
 
 # Import routes after app and db are defined to avoid circular imports
 from src.routes import user_routes, task_routes
