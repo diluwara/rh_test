@@ -1,0 +1,133 @@
+/* Error Message */
+.error-text {
+  color: red;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Modal Background */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: center;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #007bff;
+}
+
+/* User List Container */
+.user-list-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* User List Header */
+.user-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* User List Table */
+.user-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.user-list-table th,
+.user-list-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.user-list-table th {
+  background-color: #f4f4f4;
+}
+
+.user-list-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.user-list-table td button {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.user-list-table td button:last-child {
+  margin-right: 0;
+}
+
+.user-list-table td button:hover {
+  background-color: #0056b3;
+}
+
+/* Delete Confirm Buttons */
+.delete-confirm-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.delete-confirm-buttons button {
+  margin: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .user-list-container {
+    padding: 10px;
+  }
+
+  .modal-content {
+    padding: 15px;
+    max-width: 95%;
+  }
+
+  .user-list-table th,
+  .user-list-table td {
+    padding: 6px;
+    font-size: 14px;
+  }
+
+  .user-list-table td button {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}

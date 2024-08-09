@@ -1,0 +1,44 @@
+/* Global styles for the App */
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* UserList and TaskList container styles */
+.user-list-container,
+.task-list-container {
+  flex: 1;
+  min-width: 280px;
+  max-width: 48%;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .user-list-container,
+  .task-list-container {
+    max-width: 100%;
+  }
+}
