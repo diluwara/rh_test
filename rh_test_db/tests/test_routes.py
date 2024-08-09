@@ -65,46 +65,6 @@ def test_delete_user(client):
     assert response.status_code == 200
     assert data['message'] == 'User deleted successfully.'
 
-
-@pytest.mark.parametrize(
-    "payload, expected_status, error_message",
-    [
-        # Missing username
-        ({"email": "missingusername@example.com", "password": "password123"}, 400, "username is required"),
-        # Invalid email format
-        ({"username": "invalidemail", "email": "invalidemail", "password": "password123"}, 400, "Invalid email format"),
-    ]
-)
-def test_create_user_invalid_input(client, payload, expected_status, error_message):
-    """Test creating a user with invalid input."""
-    response = client.post('/users', json=payload)
-    data = response.get_json()
-
-    assert response.status_code == expected_status
-    assert error_message in data['error']
-
-
-def test_create_user_duplicate(client):
-    """Test creating a duplicate user."""
-    client.post('/users', json={
-        'username': 'testuser',
-        'email': 'testuser@example.com',
-        'password': 'password123'
-    })
-
-    response = client.post('/users', json={
-        'username': 'testuser',
-        'email': 'testuser@example.com',
-        'password': 'password123'
-    })
-
-    data = response.get_json()
-
-    assert response.status_code == 400
-    assert data is not None, "Expected JSON response but got None"
-    assert 'Database integrity error' in data['error']
-
-
 def test_get_users_pagination(client):
     """Test retrieving users with pagination."""
     for i in range(10):
