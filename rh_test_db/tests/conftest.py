@@ -1,11 +1,10 @@
 import pytest
-from src import db , create_app
+from src import db , app
 from src.models import User, Task
 
 
 @pytest.fixture
 def client():
-    app = create_app(testing=True)
     app.config['TESTING'] = True
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
