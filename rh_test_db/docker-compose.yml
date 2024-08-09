@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    command: >
+      sh -c "./wait-for-it.sh db:5432 -- 
+             python create_db.py &&
+             python run.py"
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/app
+    env_file:
+      - ./.env
+    depends_on:
+      - db
+
+  db:
+    container_name: postgres
+    image: postgres:15.2-alpine
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=fullstack_test
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  db_data:

@@ -1,0 +1,35 @@
+/* Container */
+.user-select-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between loading/error text and dropdown */
+}
+
+/* Loading and Error Text */
+.loading-text,
+.error-text {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Error Text Style */
+.error-text {
+  color: red;
+}
+
+/* Dropdown */
+.user-select-dropdown {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.user-select-dropdown:focus {
+  border-color: #007bff;
+  outline: none;
+}
