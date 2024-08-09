@@ -58,8 +58,6 @@ This project consists of a Flask backend and a React frontend, both of which are
 - **View Logs**: Use `docker-compose logs` to view logs for any service if you encounter issues.
 - **Rebuild Containers**: If you make changes to the code and need to rebuild, use `docker-compose up --build`.
 
-## Additional Notes
-
 - **Environment Variables**: Ensure any required environment variables are set in the `.env` files or `docker-compose.yml`.
 - **Network Configuration**: Ensure that network settings allow for connections to `localhost` on the specified ports.
 
