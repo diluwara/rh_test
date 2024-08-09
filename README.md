@@ -65,9 +65,3 @@ This project consists of a Flask backend and a React frontend, both of which are
 
 This README provides a quick guide to get the application up and running. If you encounter any issues or have questions, please consult the documentation or reach out for support.
 ```
-
-### Key Points
-
-- **Directory Structure**: The README includes a basic directory structure to help users understand where the backend and frontend components are located.
-- **Step-by-Step Instructions**: Clear instructions are provided for building and running each component using Docker Compose.
-- **Troubleshooting Tips**: Basic tips for troubleshooting common issues with Docker containers.
