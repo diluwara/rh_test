@@ -13,6 +13,7 @@ app.config.from_object(load_config())
 
 # Initialize the extensions
 db = SQLAlchemy(app)
+db.init_app(app)
 migrate = Migrate(app, db)
 
 # Import routes after app and db are defined to avoid circular imports
